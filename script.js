@@ -3,17 +3,14 @@ const create = document.getElementById("crtbtn");
 create.addEventListener("click", getinputvalue());
 const clear = document.getElementById('clrbtn');
 clear.addEventListener('click',clearGrid());
-// createGrid(3)
-
+createGrid(16) //default grid size
+ 
 function getinputvalue(){
     const size = parseInt(document.getElementById("size").value);
     gridcontainer.style.cssText = `grid-template-columns: repeat(${size}, 1fr);  grid-template-rows: repeat(${size}, 1fr);`;
     transient();
     createGrid(size)
 };
-
-
-
 
 function createGrid(number){
     let space = number*number;
@@ -37,5 +34,4 @@ function clearGrid(){
     grids.forEach((element)=>{
         element.classList.remove("active");
     });
-
 }
