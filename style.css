@@ -1,0 +1,130 @@
+body,html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(169, 255, 161);
+    justify-content: space-between;
+}
+#header{
+    display: flex;
+    font-weight: bold;
+    font-size: larger;
+    background-color:rgb(89, 210, 240);
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-bottom: 20px;
+    
+}
+
+
+#gridContainer{
+    display: grid;
+    height: 75vh;
+    width: 75vh;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: rgb(27, 27, 27) solid 15px;
+    border-radius: 7px;
+    margin-top: 10px;
+    background-color: rgb(247, 246, 243);
+    flex:1;
+    margin-bottom: 100px;
+    
+}
+@media screen and (max-width: 900px) {
+    #gridContainer{
+        width: 80%;
+        height: 90%;
+    }
+    .inputs{
+        width: 90%;
+
+    }
+}
+.gridItem{
+    border: black solid 1px;
+    
+}
+.active{
+    background-color:rgb(51, 51, 51);
+}
+.inputs{
+    display: flex;
+
+}
+#clrbtn{
+    background-color: rgb(235, 25, 11);
+    font-size: large;
+    width: 10vh;
+    font-weight: bold;
+    border-width: 3px;
+    border-radius: 20px;
+    
+}
+#clrbtn:hover{
+    filter: brightness(0.94);
+    background-color: rgb(235, 11, 168);
+   
+}
+#size{
+    width: 40vh;
+    height: 4vh;
+    padding-left: 5px;
+    margin-left: 5px;
+    border: black solid 2px;
+    border-radius: 8px;
+    font-weight:600;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+    
+}
+#crtbtn{
+    margin-left: 2px;
+    background-color: rgb(235, 25, 11);
+    border-radius: 25px;
+    font-size: large;
+    font-weight: bold;
+    border-width: 3px;
+}
+#crtbtn:hover{
+    filter: brightness(0.94);
+    background-color: rgb(235, 11, 168);
+
+
+
+}
+#bottom{
+    text-align: center;
+    flex: 0;
+    width:100%;
+    
+   
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 28px;
+  }
+  .icon {
+    background: url('icon.ico');
+    height: 32px;
+    width: 32px;
+    display: block;
+    /* Other styles here */
+}
