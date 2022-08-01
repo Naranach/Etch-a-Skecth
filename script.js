@@ -1,9 +1,10 @@
 const gridcontainer = document.querySelector(".gridcontainer");
 const create = document.getElementById("crtbtn");
-create.addEventListener("click", getinputvalue());
+create.addEventListener("click",()=> getinputvalue());
 const clear = document.getElementById('clrbtn');
-clear.addEventListener('click',clearGrid());
+clear.addEventListener("click",()=>clearGrid());
 createGrid(16) //default grid size
+
  
 function getinputvalue(){
     const size = parseInt(document.getElementById("size").value);
@@ -30,8 +31,8 @@ function transient(){
     });
 }
 function clearGrid(){
-    const grids=document.querySelectorAll(".active")
-    grids.forEach((element)=>{
+    const grid=document.querySelectorAll(".active")
+    grid.forEach((element)=>{
         element.classList.remove("active");
     });
 }
